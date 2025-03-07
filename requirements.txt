@@ -1,0 +1,11 @@
+python-doctr[torch]
+ipykernel
+torch
+matplotlib
+scikit-image
+pandas
+tqdm
+matplotlib
+mplcursors
+inference-cli
+python-dotenv
