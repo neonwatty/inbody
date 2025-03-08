@@ -1,0 +1,22 @@
+<div id="<%= dom_id user_profile %>" class="w-full sm:w-auto my-5 space-y-5">
+  <div>
+    <strong class="block font-medium mb-1">User:</strong>
+    <%= user_profile.user_id %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">First name:</strong>
+    <%= user_profile.first_name %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Last name:</strong>
+    <%= user_profile.last_name %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Phone number:</strong>
+    <%= user_profile.phone_number %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Profile img:</strong>
+    <%= link_to user_profile.profile_img.filename, user_profile.profile_img, class: "text-gray-700 underline hover:no-underline" if user_profile.profile_img.attached? %>
+  </div>
+</div>
