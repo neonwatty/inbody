@@ -16,8 +16,11 @@ class UserTest < ActiveSupport::TestCase
     # destroy user
     user.destroy
 
-    # assert that user profile is destroyed
-    assert_nil user.user_profile
+    # confirm that user is destroyed
+    assert_nil User.find_by(email: "test@example.com")
+
+    # confirm that user profile is destroyed
+    assert_nil UserProfile.find_by(user_id: user.id)
   end
 
   test "confirm uniqueness of email" do

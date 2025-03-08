@@ -8,5 +8,6 @@ class CreateUserProfiles < ActiveRecord::Migration[8.0]
 
       t.timestamps
     end
+    add_index :user_profiles, :phone_number, unique: true
   end
 end

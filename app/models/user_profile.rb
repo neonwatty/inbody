@@ -9,6 +9,15 @@ class UserProfile < ApplicationRecord
   # Validations
   validates :first_name, length: { maximum: 100 }, allow_blank: true
   validates :last_name, length: { maximum: 100 }, allow_blank: true
-  validates :phone_number, allow_blank: true, format: { with: /\A[0-9\-\+\(\)\s]*\z/, message: "only allows valid phone numbers" }
 
+  # Apply uniqueness and format validations only if phone_number is present
+  validates :phone_number, uniqueness: true, if: :phone_number_present?
+  validates :phone_number, format: { with: /\A[0-9\-\+\(\)\s]*\z/, message: "only allows valid phone numbers" }, if: :phone_number_present?
+
+  private
+
+  # Check if phone_number is present
+  def phone_number_present?
+    phone_number.present?
+  end
 end
