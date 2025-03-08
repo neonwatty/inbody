@@ -9,3 +9,5 @@ matplotlib
 mplcursors
 inference-cli
 python-dotenv
+numpy
+opencv-python
