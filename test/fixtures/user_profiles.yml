@@ -2,14 +2,18 @@
 
 one:
   user: one
-  first_name: MyString
-  last_name: MyString
-  phone_number: MyString
-  email_address: MyString
+  first_name: Larry
+  last_name: David
+  phone_number: 555-123-4567
 
 two:
   user: two
-  first_name: MyString
-  last_name: MyString
-  phone_number: MyString
-  email_address: MyString
+  first_name: Homer
+  last_name: Simpson
+  phone_number: 555-555-5555
+
+three:
+  user: three
+  first_name: George
+  last_name: Costanza
+  phone_number: 555-867-5309

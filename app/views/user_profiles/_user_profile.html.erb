@@ -11,12 +11,22 @@
     <strong class="block font-medium mb-1">Last name:</strong>
     <%= user_profile.last_name %>
   </div>
+    <div>
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= User.find(user_profile.user_id).email %>
+  </div>
   <div>
     <strong class="block font-medium mb-1">Phone number:</strong>
     <%= user_profile.phone_number %>
   </div>
   <div>
     <strong class="block font-medium mb-1">Profile img:</strong>
-    <%= link_to user_profile.profile_img.filename, user_profile.profile_img, class: "text-gray-700 underline hover:no-underline" if user_profile.profile_img.attached? %>
-  </div>
+
+    <% if user_profile.profile_img.attached? %>
+      <%= image_tag user_profile.profile_img.variant(:thumb) %>
+    <% else %>
+      <%= image_tag "default_profile.jpg", size: "100x100", alt: "Default Profile Image" %>
+    <% end %>
+    </div>
+
 </div>

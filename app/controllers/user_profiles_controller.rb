@@ -8,6 +8,7 @@ class UserProfilesController < ApplicationController
 
   # GET /user_profiles/1 or /user_profiles/1.json
   def show
+    @user_profile = UserProfile.find(params[:id])
   end
 
   # GET /user_profiles/new
@@ -65,6 +66,6 @@ class UserProfilesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_profile_params
-      params.expect(user_profile: [ :user_id, :first_name, :last_name, :phone_number, :profile_img ])
+      params.expect(user_profile: [ :user_id, :first_name, :last_name, :phone_number, :email, :profile_img ])
     end
 end

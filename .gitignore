@@ -5,6 +5,7 @@
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
 # Ignore bundler config.
+*.DS_Store
 /db_data
 /.bundle
 

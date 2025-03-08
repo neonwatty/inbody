@@ -8,8 +8,5 @@ class CreateUserProfiles < ActiveRecord::Migration[8.0]
 
       t.timestamps
     end
-
-    # Add an index to email_address to ensure uniqueness
-    add_index :user_profiles, :email_address, unique: true
   end
 end
